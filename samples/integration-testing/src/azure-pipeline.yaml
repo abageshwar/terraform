@@ -26,10 +26,6 @@ stages:
       pool:
         vmImage: ubuntu-20.04
       steps:
-      - task: TerraformInstaller@0.7.8
-        displayName: install terraform
-        inputs:
-          terraformVersion: latest
       # Step 1: run the Checkov Static Code Analysis
       - bash: $(terraformWorkingDirectory)/checkov.sh $(terraformWorkingDirectory)
         displayName: Checkov Static Code Analysis
