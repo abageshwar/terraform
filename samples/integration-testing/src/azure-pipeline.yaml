@@ -30,7 +30,7 @@ stages:
       - bash: $(terraformWorkingDirectory)/checkov.sh $(terraformWorkingDirectory)
         displayName: Checkov Static Code Analysis
       # Step 2: install Terraform on the Azure Pipelines agent
-      - task: TerraformCLI
+      - task: TerraformCLI@0
         displayName: 'Install Terraform'
         inputs:
           terraformVersion: $(terraformVersion)
